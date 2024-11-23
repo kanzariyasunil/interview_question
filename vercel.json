@@ -1,0 +1,11 @@
+{
+    "builds":[{
+        "src":"interview/wsgi.py",
+        "use":"@vercel/python",
+        "config":{"maxLambdaSize":"15mb","runtime":"python3.12"}
+    }],
+    "routes":[{
+        "src":"/(.*)",
+        "dest":"interview/wsgi.py"
+        }]
+}
